@@ -6,29 +6,6 @@ const Button = ({handleClick, text}) => (
   </button>
 )
 
-const Stats = ({good, neutral, bad}) => {
-
-  if(good+bad+neutral===0){
-    return(
-      <>
-        <h1>statistics</h1>
-        <p>No feedback given</p>
-      </>
-    )
-  }
-  return (
-    <>
-      <h1>statistics</h1>
-      <p>good {good}</p>
-      <p>neutral {neutral}</p>
-      <p>bad {bad}</p>
-      <p>all {good+neutral+bad}</p>
-      <p>average {(good-bad)/(good+bad+neutral)}</p>
-      <p>positive {good/(good+neutral+bad)*100}%</p>
-    </>
-  )
-}
-
 const Statistic = ({text, value}) => {return <tr> <td>{text}</td> <td> {value}</td> </tr>}
 
 const App = () => {
